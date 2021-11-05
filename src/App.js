@@ -37,6 +37,9 @@ function App() {
   const APIKEY = "q6ts81N1nnTcUmz3h9d0qarPtZAi4VyiVsDPZLGq";
 
   const upDate = () => {
+    if (currentDate === todayFormated) {
+      return;
+    }
     today.setDate(today.getDate() + 1);
     setCurrentDate(today.toISOString().slice(0, 10));
   };
