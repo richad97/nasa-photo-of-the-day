@@ -3,9 +3,33 @@ body {
 }
 
 * {
+  /* border: 1px solid black; */
   color: white;
 }
+
+body {
+  border: 1px solid gold;
+  margin: 0.7rem 1rem;
+}
+
 img {
   width: 600px;
   height: 500px;
+}
+
+.explanation-wrapper {
+  border: 1px solid gold;
+  background-color: rgb(39, 39, 39);
+  width: 45%;
+  margin: 1rem 0;
+}
+
+.img-wrapper {
+  border: 1px solid gold;
+  background-color: rgb(39, 39, 39);
+  margin: 1rem 0;
+}
+
+.explanation {
+  line-height: 2rem;
 }

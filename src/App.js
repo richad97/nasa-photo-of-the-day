@@ -8,8 +8,13 @@ const today = new Date();
 const todayFormated = today.toISOString().slice(0, 10);
 
 const Title = styled.h1`
-  padding: 0.5rem 0;
+  margin: 0.5rem 0;
   color: goldenrod;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
 `;
 
 function DatePicker(props) {
@@ -59,17 +64,17 @@ function App() {
     <div className="App">
       <Title>NASA Astronomy Picture of the Day</Title>
 
-      <div className="content-wrapper">
-        <section className="explanation">
-          <p>{data.explanation}</p>
+      <ContentWrapper>
+        <section className="explanation-wrapper">
+          <p className="explanation">{data.explanation}</p>
         </section>
-        <section className="photo-wrapper">
+        <section className="img-wrapper">
           {data.url ? (
             <img src={data.url} alt="nasa-apod"></img>
           ) : (
             <p>Loading...</p>
           )}
-          <div>
+          <div style={{ margin: "1rem" }}>
             <p>{data.title}</p>
             <DatePicker
               upDate={upDate}
@@ -78,7 +83,7 @@ function App() {
             />
           </div>
         </section>
-      </div>
+      </ContentWrapper>
     </div>
   );
 }
